@@ -33,6 +33,56 @@ function generateOpponentChoice() {
     } else {
         opponentChoice = 'spock'
     }
-    // without this the opponent choice wont be shown
+
     opponentChoiceShow.innerHTML = opponentChoice;
+}
+
+// STEP 3
+//**funtion to determine the result of every choice */
+function generateResult() {
+    if (playerChoice === opponentChoice) {
+        result = 'DRAW!'
+    } else if (playerChoice === 'rock' && opponentChoice === 'paper') {
+        result = 'YOU LOSE!'
+    } else if (playerChoice === 'rock' && opponentChoice === 'scissors') {
+        result = 'YOU WIN!'
+    } else if (playerChoice === 'rock' && opponentChoice === 'lizard') {
+        result = 'YOU WIN!'
+    } else if (playerChoice === 'rock' && opponentChoice === 'spock') {
+        result = 'YOU LOSE!'
+    } else if (playerChoice === 'paper' && opponentChoice === 'rock') {
+        result = 'YOU WIN!'
+    } else if (playerChoice === 'paper' && opponentChoice === 'scissors') {
+        result = 'YOU LOSE!'
+    } else if (playerChoice === 'paper' && opponentChoice === 'lizard') {
+        result = 'YOU LOSE!'
+    } else if (playerChoice === 'paper' && opponentChoice === 'spock') {
+        result = 'YOU WIN!'
+    } else if (playerChoice === 'scissors' && opponentChoice === 'rock') {
+        result = 'YOU LOSE!'
+    } else if (playerChoice === 'scissors' && opponentChoice === 'paper') {
+        result = 'YOU WIN!'
+    } else if (playerChoice === 'scissors' && opponentChoice === 'lizard') {
+        result = 'YOU WIN!'
+    } else if (playerChoice === 'scissors' && opponentChoice === 'spock') {
+        result = 'YOU LOSE!'
+    } else if (playerChoice === 'lizard' && opponentChoice === 'rock') {
+        result = 'YOU LOSE!'
+    } else if (playerChoice === 'lizard' && opponentChoice === 'paper') {
+        result = 'YOU WIN!'
+    } else if (playerChoice === 'lizard' && opponentChoice === 'scissors') {
+        result = 'YOU LOSE!'
+    } else if (playerChoice === 'lizard' && opponentChoice === 'spock') {
+        result = 'YOU WIN!'
+    } else if (playerChoice === 'spock' && opponentChoice === 'rock') {
+        result = 'YOU WIN!'
+    } else if (playerChoice === 'spock' && opponentChoice === 'paper') {
+        result = 'YOU LOSE!'
+    } else if (playerChoice === 'spock' && opponentChoice === 'scissors') {
+        result = 'YOU WIN!'
+    } else if (playerChoice === 'spock' && opponentChoice === 'lizard') {
+        result = 'YOU LOSE!'
+    }
+
+    resultShow.innerHTML = result;
 }
