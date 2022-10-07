@@ -14,7 +14,9 @@ gameChoices.forEach(choice => choice.addEventListener('click', (btn_click) => {
     playerChoice = btn_click.target.id
     playerChoiceShow.innerHTML = playerChoice;
     // also generate choice for the opponent
+    generateOpponentChoice();
     // also generate the result
+    generateResult();
 }))
 
 // STEP 2
@@ -86,3 +88,7 @@ function generateResult() {
 
     resultShow.innerHTML = result;
 }
+
+// STEP 4
+// create function to determine score value
+// check love math for better understanding
