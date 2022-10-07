@@ -92,3 +92,9 @@ function generateResult() {
 // STEP 4
 // create function to determine score value
 // check love math for better understanding
+// function determineWinner() {
+//     let calculateResult = document.getElementById('fight_result').innerHTML
+//     if (calculateResult === 'YOU WIN!') {
+// 
+//     } else { }
+// }
