@@ -8,6 +8,8 @@ const resultShow = document.getElementById('fight_result');
 let playerChoice;
 let opponentChoice;
 let result;
+// let playerScore = parseInt(document.getElementById('player_score').innerText);
+// let opponentScore = parseInt(document.getElementById('opponent_score').innerText);
 
 // when the function is called, it also calls functions to assign opponent value choice and generate result
 gameChoices.forEach(choice => choice.addEventListener('click', (btn_click) => {
@@ -17,6 +19,7 @@ gameChoices.forEach(choice => choice.addEventListener('click', (btn_click) => {
     generateOpponentChoice();
     // also generate the result
     generateResult();
+//    determineWinner();
 }))
 
 // STEP 2
@@ -93,8 +96,10 @@ function generateResult() {
 // create function to determine score value
 // check love math for better understanding
 // function determineWinner() {
-//     let calculateResult = document.getElementById('fight_result').innerHTML
-//     if (calculateResult === 'YOU WIN!') {
-// 
-//     } else { }
+//     let calculateResult = document.getElementById('fight_result').innerHTML;
+//     if (calculateResult === "YOU WIN!") {
+//         document.getElementById('fight_result').innerHTML = ++playerScore;
+//     } else {
+//         opponentScore = ++opponentScore;
+//     }
 // }
