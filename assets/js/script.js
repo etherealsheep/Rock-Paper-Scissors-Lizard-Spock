@@ -4,12 +4,12 @@
 const gameChoices = document.querySelectorAll('button');
 const playerChoiceShow = document.getElementById('player_choice');
 const opponentChoiceShow = document.getElementById('opponent_choice');
-const resultShow = document.getElementById('fight_result');
+const resultShow = document.getElementById('match_result');
 let playerChoice;
 let opponentChoice;
 let result;
-// let playerScore = parseInt(document.getElementById('player_score').innerText);
-// let opponentScore = parseInt(document.getElementById('opponent_score').innerText);
+let playerScore = document.getElementById('player_score').innerHTML;
+let opponentScore = document.getElementById('opponent_score').innerHTML;
 
 // when the function is called, it also calls functions to assign opponent value choice and generate result
 gameChoices.forEach(choice => choice.addEventListener('click', (btn_click) => {
@@ -19,7 +19,8 @@ gameChoices.forEach(choice => choice.addEventListener('click', (btn_click) => {
     generateOpponentChoice();
     // also generate the result
     generateResult();
-//    determineWinner();
+    // increase the winner score;
+    increaseWinnerScore()
 }))
 
 // STEP 2
@@ -95,11 +96,11 @@ function generateResult() {
 // STEP 4
 // create function to determine score value
 // check love math for better understanding
-// function determineWinner() {
-//     let calculateResult = document.getElementById('fight_result').innerHTML;
-//     if (calculateResult === "YOU WIN!") {
-//         document.getElementById('fight_result').innerHTML = ++playerScore;
-//     } else {
-//         opponentScore = ++opponentScore;
-//     }
-// }
+function increaseWinnerScore() {
+    let calculateResult = document.getElementById('fight_result').innerHTML;
+    if (calculateResult === 'YOU WIN!') {
+        playerScore = ++playerscore;
+    } else {
+        opponentScore = ++opponentScore;
+    }
+}
