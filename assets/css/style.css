@@ -1,5 +1,31 @@
 body {
     margin: 0;
     text-align: center;
-    background-color: greenyellow
+}
+
+.button {
+    width: 220px;
+    height: 60px;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: green;
+    border-radius: 50%;
+    background-color: skyblue;
+    border: 9px solid;
+    width: 120px;
+    height: 120px;
+    font-size: 1.2rem;
+    margin: 5px 10px;
+    transition: all 0.5s;
+}
+
+#player_score_id {
+    text-transform: uppercase;
+    color: blue;
+}
+
+#opponent_score_id {
+    text-transform: uppercase;
+    color: red;
 }
