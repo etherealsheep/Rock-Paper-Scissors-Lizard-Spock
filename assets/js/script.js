@@ -8,8 +8,8 @@ const resultShow = document.getElementById('match_result');
 let playerChoice;
 let opponentChoice;
 let result;
-let playerScore = document.getElementById('player_score').innerHTML;
-let opponentScore = document.getElementById('opponent_score').innerHTML;
+let playerScore = 0;
+let opponentScore = 0;
 
 // when the function is called, it also calls functions to assign opponent value choice and generate result
 gameChoices.forEach(choice => choice.addEventListener('click', (btn_click) => {
@@ -19,12 +19,12 @@ gameChoices.forEach(choice => choice.addEventListener('click', (btn_click) => {
     generateOpponentChoice();
     // also generate the result
     generateResult();
-    // increase the winner score;
+    // increase the winner score
     increaseWinnerScore()
 }))
 
 // STEP 2
-//**funtion to generate random selection for the opponent */
+// funtion to generate random selection for the opponent
 function generateOpponentChoice() {
     // https://www.w3schools.com/js/js_random.asp
     let randomNumber = Math.floor(Math.random() * 5) + 1;
@@ -39,12 +39,12 @@ function generateOpponentChoice() {
     } else {
         opponentChoice = 'spock'
     }
-
+    // without this, the opponent choice won't be displayed
     opponentChoiceShow.innerHTML = opponentChoice;
 }
 
 // STEP 3
-//**funtion to determine the result of every choice */
+// funtion to determine the result of every choice
 function generateResult() {
     if (playerChoice === opponentChoice) {
         result = 'DRAW!'
@@ -89,18 +89,18 @@ function generateResult() {
     } else if (playerChoice === 'spock' && opponentChoice === 'lizard') {
         result = 'YOU LOSE!'
     }
-
+    // without this, the result won't be displayed
     resultShow.innerHTML = result;
 }
 
 // STEP 4
 // create function to determine score value
 // check love math for better understanding
-function increaseWinnerScore() {
-    let calculateResult = document.getElementById('fight_result').innerHTML;
-    if (calculateResult === 'YOU WIN!') {
-        playerScore = ++playerscore;
-    } else {
-        opponentScore = ++opponentScore;
-    }
-}
+// function determineWinner() {
+//     let calculateResult = document.getElementById('fight_result').innerHTML;
+//     if (calculateResult === 'YOU WIN!') {
+//         playerScore = ++playerScore;
+//     } else {
+//         opponentScore = ++opponentScore;
+//     }
+// }
