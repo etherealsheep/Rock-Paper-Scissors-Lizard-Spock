@@ -47,7 +47,7 @@ function generateOpponentChoice() {
 // funtion to determine the result of every choice
 function generateResult() {
     if (playerChoice === opponentChoice) {
-        result = 'DRAW!'
+        result = 'IT\'S A DRAW!'
     } else if (playerChoice === 'rock' && opponentChoice === 'paper') {
         result = 'YOU LOSE!'
     } else if (playerChoice === 'rock' && opponentChoice === 'scissors') {
@@ -104,3 +104,16 @@ function generateResult() {
 //         opponentScore = ++opponentScore;
 //     }
 // }
+
+// STEP 4
+// create function to determine score value
+function increaseWinnerScore() {
+    let calculateResult = document.getElementById('match_result').innerHTML;
+    if (calculateResult === 'YOU WIN!') {
+        playerScore = ++playerScore;
+    } else if (calculateResult === 'YOU LOSE!') {
+        opponentScore = ++opponentScore;
+    }
+    document.getElementById('player_score').innerHTML = playerScore;
+    document.getElementById('opponent_score').innerHTML = opponentScore;
+}
