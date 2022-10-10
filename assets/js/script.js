@@ -5,6 +5,7 @@ const gameChoices = document.querySelectorAll('button');
 const playerChoiceShow = document.getElementById('player_choice');
 const opponentChoiceShow = document.getElementById('opponent_choice');
 const resultShow = document.getElementById('match_result');
+// const resetGame = document.getElementById('reset');
 let playerChoice;
 let opponentChoice;
 let result;
@@ -95,18 +96,6 @@ function generateResult() {
 
 // STEP 4
 // create function to determine score value
-// check love math for better understanding
-// function determineWinner() {
-//     let calculateResult = document.getElementById('fight_result').innerHTML;
-//     if (calculateResult === 'YOU WIN!') {
-//         playerScore = ++playerScore;
-//     } else {
-//         opponentScore = ++opponentScore;
-//     }
-// }
-
-// STEP 4
-// create function to determine score value
 function increaseWinnerScore() {
     let calculateResult = document.getElementById('match_result').innerHTML;
     if (calculateResult === 'YOU WIN!') {
@@ -117,3 +106,4 @@ function increaseWinnerScore() {
     document.getElementById('player_score').innerHTML = playerScore;
     document.getElementById('opponent_score').innerHTML = opponentScore;
 }
+
