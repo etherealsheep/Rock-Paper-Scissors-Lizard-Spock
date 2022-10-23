@@ -1,4 +1,3 @@
-
 body {
     max-width: 1200px;
     margin: 0 auto;
@@ -17,12 +16,12 @@ body {
     background-size: cover;
 }
 
-#player_choice {
+#P1_choice {
     text-transform: uppercase;
     color: blue;
 }
 
-#opponent_choice {
+#P2_choice {
     text-transform: uppercase;
     color: red;
 }

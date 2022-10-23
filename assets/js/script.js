@@ -2,22 +2,22 @@
 // create a function to allow player choice the same button value
 // e.g.; if spock button is pressed, assign spock_value to player choice
 const gameChoices = document.querySelectorAll('button');
-const playerChoiceShow = document.getElementById('player_choice');
-const opponentChoiceShow = document.getElementById('opponent_choice');
+const p1ChoiceShow = document.getElementById('P1_choice');
+const p2ChoiceShow = document.getElementById('P2_choice');
 const resultShow = document.getElementById('match_result');
 // const resetGame = document.getElementById('reset');
-let playerChoice;
-let opponentChoice;
+let p1Choice;
+let p2Choice;
 let result;
-let playerScore = 0;
-let opponentScore = 0;
+let p1Score = 0;
+let p2Score = 0;
 
 // when the function is called, it also calls functions to assign opponent value choice and generate result
 gameChoices.forEach(choice => choice.addEventListener('click', (btn_click) => {
-    playerChoice = btn_click.target.id
-    playerChoiceShow.innerHTML = playerChoice;
+    p1Choice = btn_click.target.id
+    p1ChoiceShow.innerHTML = p1Choice;
     // also generate choice for the opponent
-    generateOpponentChoice();
+    generatep2Choice();
     // also generate the result
     generateResult();
     // increase the winner score
@@ -26,68 +26,68 @@ gameChoices.forEach(choice => choice.addEventListener('click', (btn_click) => {
 
 // STEP 2
 // funtion to generate random selection for the opponent
-function generateOpponentChoice() {
+function generatep2Choice() {
     // https://www.w3schools.com/js/js_random.asp
     let randomNumber = Math.floor(Math.random() * 5) + 1;
     if (randomNumber === 1) {
-        opponentChoice = 'rock'
+        p2Choice = 'rock'
     } else if (randomNumber === 2) {
-        opponentChoice = 'paper'
+        p2Choice = 'paper'
     } else if (randomNumber === 3) {
-        opponentChoice = 'scissors'
+        p2Choice = 'scissors'
     } else if (randomNumber === 4) {
-        opponentChoice = 'lizard'
+        p2Choice = 'lizard'
     } else {
-        opponentChoice = 'spock'
+        p2Choice = 'spock'
     }
     // without this, the opponent choice won't be displayed
-    opponentChoiceShow.innerHTML = opponentChoice;
+    p2ChoiceShow.innerHTML = p2Choice;
 }
 
 // STEP 3
 // funtion to determine the result of every choice
 function generateResult() {
-    if (playerChoice === opponentChoice) {
+    if (p1Choice === p2Choice) {
         result = 'IT\'S A DRAW!'
-    } else if (playerChoice === 'rock' && opponentChoice === 'paper') {
+    } else if (p1Choice === 'rock' && p2Choice === 'paper') {
         result = 'YOU LOSE!'
-    } else if (playerChoice === 'rock' && opponentChoice === 'scissors') {
+    } else if (p1Choice === 'rock' && p2Choice === 'scissors') {
         result = 'YOU WIN!'
-    } else if (playerChoice === 'rock' && opponentChoice === 'lizard') {
+    } else if (p1Choice === 'rock' && p2Choice === 'lizard') {
         result = 'YOU WIN!'
-    } else if (playerChoice === 'rock' && opponentChoice === 'spock') {
+    } else if (p1Choice === 'rock' && p2Choice === 'spock') {
         result = 'YOU LOSE!'
-    } else if (playerChoice === 'paper' && opponentChoice === 'rock') {
+    } else if (p1Choice === 'paper' && p2Choice === 'rock') {
         result = 'YOU WIN!'
-    } else if (playerChoice === 'paper' && opponentChoice === 'scissors') {
+    } else if (p1Choice === 'paper' && p2Choice === 'scissors') {
         result = 'YOU LOSE!'
-    } else if (playerChoice === 'paper' && opponentChoice === 'lizard') {
+    } else if (p1Choice === 'paper' && p2Choice === 'lizard') {
         result = 'YOU LOSE!'
-    } else if (playerChoice === 'paper' && opponentChoice === 'spock') {
+    } else if (p1Choice === 'paper' && p2Choice === 'spock') {
         result = 'YOU WIN!'
-    } else if (playerChoice === 'scissors' && opponentChoice === 'rock') {
+    } else if (p1Choice === 'scissors' && p2Choice === 'rock') {
         result = 'YOU LOSE!'
-    } else if (playerChoice === 'scissors' && opponentChoice === 'paper') {
+    } else if (p1Choice === 'scissors' && p2Choice === 'paper') {
         result = 'YOU WIN!'
-    } else if (playerChoice === 'scissors' && opponentChoice === 'lizard') {
+    } else if (p1Choice === 'scissors' && p2Choice === 'lizard') {
         result = 'YOU WIN!'
-    } else if (playerChoice === 'scissors' && opponentChoice === 'spock') {
+    } else if (p1Choice === 'scissors' && p2Choice === 'spock') {
         result = 'YOU LOSE!'
-    } else if (playerChoice === 'lizard' && opponentChoice === 'rock') {
+    } else if (p1Choice === 'lizard' && p2Choice === 'rock') {
         result = 'YOU LOSE!'
-    } else if (playerChoice === 'lizard' && opponentChoice === 'paper') {
+    } else if (p1Choice === 'lizard' && p2Choice === 'paper') {
         result = 'YOU WIN!'
-    } else if (playerChoice === 'lizard' && opponentChoice === 'scissors') {
+    } else if (p1Choice === 'lizard' && p2Choice === 'scissors') {
         result = 'YOU LOSE!'
-    } else if (playerChoice === 'lizard' && opponentChoice === 'spock') {
+    } else if (p1Choice === 'lizard' && p2Choice === 'spock') {
         result = 'YOU WIN!'
-    } else if (playerChoice === 'spock' && opponentChoice === 'rock') {
+    } else if (p1Choice === 'spock' && p2Choice === 'rock') {
         result = 'YOU WIN!'
-    } else if (playerChoice === 'spock' && opponentChoice === 'paper') {
+    } else if (p1Choice === 'spock' && p2Choice === 'paper') {
         result = 'YOU LOSE!'
-    } else if (playerChoice === 'spock' && opponentChoice === 'scissors') {
+    } else if (p1Choice === 'spock' && p2Choice === 'scissors') {
         result = 'YOU WIN!'
-    } else if (playerChoice === 'spock' && opponentChoice === 'lizard') {
+    } else if (p1Choice === 'spock' && p2Choice === 'lizard') {
         result = 'YOU LOSE!'
     }
     // without this, the result won't be displayed
@@ -99,11 +99,11 @@ function generateResult() {
 function increaseWinnerScore() {
     let calculateResult = document.getElementById('match_result').innerHTML;
     if (calculateResult === 'YOU WIN!') {
-        playerScore = ++playerScore;
+        p1Score = ++p1Score;
     } else if (calculateResult === 'YOU LOSE!') {
-        opponentScore = ++opponentScore;
+        p2Score = ++p2Score;
     }
-    document.getElementById('player_score').innerHTML = playerScore;
-    document.getElementById('opponent_score').innerHTML = opponentScore;
+    document.getElementById('player_score').innerHTML = p1Score;
+    document.getElementById('opponent_score').innerHTML = p2Score;
 }
 
