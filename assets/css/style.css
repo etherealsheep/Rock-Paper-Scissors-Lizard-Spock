@@ -1,6 +1,8 @@
+
 body {
     margin: 0;
     text-align: center;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .button {
@@ -19,6 +21,7 @@ body {
     margin: 5px 10px;
     transition: all 0.5s;
 }
+
 
 #player_score_id {
     text-transform: uppercase;
