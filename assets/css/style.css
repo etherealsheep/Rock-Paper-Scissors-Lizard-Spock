@@ -8,7 +8,7 @@ body {
 }
 
 #game_area {
-    background-image: url('../images/rpsls.png');
+    background-image: url('../images/rpsls.webp');
     min-height: 300px;
     max-width: 100%;
     height: auto;
@@ -49,6 +49,8 @@ body {
 
 .button:hover {
     cursor: pointer;
+    color: white;
+    background-color: blue;
 }
 
 #P1_box {
