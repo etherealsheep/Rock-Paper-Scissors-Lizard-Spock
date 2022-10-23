@@ -7,8 +7,15 @@ body {
     font-family: 'Press Start 2P', cursive;
 }
 
-input [type = button] {
-    font-family: monospace;
+#game_area {
+    background-image: url('../images/rpsls.png');
+    min-height: 300px;
+    max-width: 100%;
+    height: auto;
+    background-position-y: -1cm;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 #player_choice {
@@ -45,16 +52,10 @@ input [type = button] {
 }
 
 #P1_box {
-    float: left;
-    margin: 5px;
-    width: 45%;
     color: blue;
 }
 
 #P2_box {
-    float: right;
-    margin: 5px;
-    width: 45%;
     color: red;
 }
 
@@ -71,4 +72,14 @@ input [type = button] {
 #opponent_score_id {
     text-transform: uppercase;
     color: red;
+}
+
+
+@media screen and (max-width: 400px) {
+    #game_area {
+        min-height: 200px;
+        width: 100%;
+        height: auto;
+        background-position: center;
+   }
 }
