@@ -1,6 +1,8 @@
 
 body {
-    margin: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
     text-align: center;
     font-family: 'Press Start 2P', cursive;
 }
@@ -24,6 +26,23 @@ body {
 
 .button:hover {
     cursor: pointer;
+}
+
+#P1_box {
+    float: left;
+    margin: 5px;
+    width: 45%;
+}
+
+#P2_box {
+    float: right;
+    margin: 5px;
+    width: 45%;
+}
+
+#hr {
+    color: white;
+    width: auto;
 }
 
 #player_score_id {

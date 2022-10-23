@@ -17,16 +17,24 @@
 
 <body>
 
-    <div id="game_area">
-        <img src="assets/images/rpsls.png" alt="main">
-        <h2>Player:<span id="player_choice"></span></h2>
-        <h2>Opponent:<span id="opponent_choice"></span></h2>
+    <section>
+        <div id="game_area">
+            <img src="assets/images/rpsls.png" alt="main">
+            <div id="P1_box">
+                <h2>P1:<span id="player_choice"></span></h2>
+            </div>
+            <div id="P2_box">
+                <h2>P2:<span id="opponent_choice"></span></h2>
+            </div>
+    </section>
+
+    <section>
         <button class="button" id="rock">rock</button>
         <button class="button" id="paper">paper</button>
         <button class="button" id="scissors">scissor</button>
         <button class="button" id="lizard">lizard</button>
         <button class="button" id="spock">spock</button>
-        <!-- <button id="reset">reset</button> -->
+    </section>
     </div>
 
     <div id="result_area">
