@@ -7,19 +7,35 @@ body {
     font-family: 'Press Start 2P', cursive;
 }
 
+input [type = button] {
+    font-family: monospace;
+}
+
+#player_choice {
+    text-transform: uppercase;
+    color: blue;
+}
+
+#opponent_choice {
+    text-transform: uppercase;
+    color: red;
+}
+
+#result_area {
+    color: green;
+}
+
 .button {
     width: 220px;
     height: 60px;
-    font-family: "Raleway", sans-serif;
+    font-family: inherit;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: green;
-    border-radius: 50%;
-    background-color: skyblue;
-    border: 9px solid;
-    width: 120px;
-    height: 120px;
-    font-size: 1.2rem;
+    /* letter-spacing: 1px; */
+    color: black;
+    border: 5px solid;
+    width: 150px;
+    height: 90px;
+    font-size: 1rem;
     margin: 5px 10px;
     transition: all 0.5s;
 }
@@ -32,12 +48,14 @@ body {
     float: left;
     margin: 5px;
     width: 45%;
+    color: blue;
 }
 
 #P2_box {
     float: right;
     margin: 5px;
     width: 45%;
+    color: red;
 }
 
 #hr {
