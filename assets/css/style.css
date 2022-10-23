@@ -15,7 +15,6 @@ body {
     background-position-y: -2cm;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
 }
 
 #player_choice {
@@ -37,7 +36,6 @@ body {
     height: 60px;
     font-family: inherit;
     text-transform: uppercase;
-    /* letter-spacing: 1px; */
     color: black;
     border: 5px solid;
     width: 150px;
@@ -76,8 +74,25 @@ body {
     color: red;
 }
 
+@media screen and (max-width: 1024px) {
+    #game_area {
+        min-height: 280px;
+        width: 100%;
+        height: auto;
+        background-position: center;
+   }
+}
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 912px) {
+    #game_area {
+        min-height: 250px;
+        width: 100%;
+        height: auto;
+        background-position: center;
+   }
+}
+
+@media screen and (max-width: 415px) {
     #game_area {
         min-height: 200px;
         width: 100%;
