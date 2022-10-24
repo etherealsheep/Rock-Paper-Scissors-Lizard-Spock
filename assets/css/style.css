@@ -6,14 +6,18 @@ body {
     font-family: 'Press Start 2P', cursive;
 }
 
-#game_area {
+#image_area {
     background-image: url('../images/rpsls.webp');
-    min-height: 300px;
+    min-height: 350px;
     max-width: 100%;
     height: auto;
-    background-position-y: -2cm;
+    background-position-y: -1.5cm;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#player_area {
+    padding-top: 10px;
 }
 
 #P1_choice {
@@ -26,8 +30,13 @@ body {
     color: red;
 }
 
+#button_area {
+    padding-top: 10px;
+}
+
 #result_area {
     color: green;
+    padding-top: 10px;
 }
 
 .button {
@@ -58,11 +67,6 @@ body {
     color: red;
 }
 
-#hr {
-    color: white;
-    width: auto;
-}
-
 #player_score_id {
     text-transform: uppercase;
     color: blue;
@@ -71,6 +75,28 @@ body {
 #opponent_score_id {
     text-transform: uppercase;
     color: red;
+}
+
+#rules_area {
+    padding-top: 10px;
+}
+
+.footer {
+    max-width: 1200px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+.social-networks li {
+    list-style-type: none;
+    display: inline;
+    padding: 0% 5% 0% 5%;
+}
+.social-networks li a {
+    color: white;
+    font-size: 30px;
 }
 
 @media screen and (max-width: 1024px) {
