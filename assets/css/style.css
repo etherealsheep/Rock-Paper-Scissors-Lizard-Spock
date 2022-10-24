@@ -45,6 +45,7 @@ body {
     font-family: inherit;
     text-transform: uppercase;
     color: black;
+    background-color: whitesmoke;
     border: 5px solid;
     width: 150px;
     height: 90px;
