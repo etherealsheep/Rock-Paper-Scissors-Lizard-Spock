@@ -107,7 +107,7 @@ body {
         width: 100%;
         height: auto;
         background-position: center;
-   }
+    }
 }
 
 @media screen and (max-width: 912px) {
@@ -116,7 +116,7 @@ body {
         width: 100%;
         height: auto;
         background-position: center;
-   }
+    }
 }
 
 @media screen and (max-width: 415px) {
@@ -125,5 +125,5 @@ body {
         width: 100%;
         height: auto;
         background-position: center;
-   }
+    }
 }
