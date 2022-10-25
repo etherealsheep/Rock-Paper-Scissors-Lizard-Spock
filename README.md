@@ -1,108 +1,142 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Rock, Paper, Scissors, Lizard, Spock
 
-Welcome etherealsheep,
+[Play here](https://etherealsheep.github.io/Rock-Paper-Scissors-Lizard-Spock/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![](docs/images/amiresponsive.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+"Rock, Paper, Scissors, Lizard, Spock" is a game teached by Sheldon Cooper, from The Big Bang Theory.
 
-## Gitpod Reminders
+This is the enhanced version of the classic old game "Rock, Paper, Scissors".
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+It is a quick, fun and simple game, the rules are inside the game for better clarity, but they are not needed to play.
 
-`python3 -m http.server`
+# **Features**
 
-A blue button should appear to click: _Make Public_,
+## **Header**
+To make the game more captivating, a colorful image located at the top of the page (image source in the Credit section at the end of the readme).
 
-Another blue button should appear to click: _Open Browser_.
+The image contains the game name, which make it perfect and it gives immediate idea about the game you are going to play.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![](docs/images/header.png)
 
-A blue button should appear to click: _Make Public_,
+## **Fonts**
+For this project, google fonts "Press Start 2P" has been chosen because I wanted to give the feeling of a retro-game, something old but enjoyable.
 
-Another blue button should appear to click: _Open Browser_.
+![](docs/images/press_start_2p_font.png)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## **Player choice**
+P1 is the player 1, the user.
 
-To log into the Heroku toolbelt CLI:
+P2 is the computer.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+P1 and P2 choices are showed here, following the tradition of old school games, colors blue and red are assigned to each player.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## **Game Options**
+The Game options are provided by five interactive buttons, one for each choice, selected button change colors putting some emphasys on the choice.
 
-------
+Every button, when selected, assign to the player the same choice.
 
-## Release History
+## **Result**
+- When the user select an option, the value associated to the selected option will be assigned to P1.
+This is happening because an event listener called by the funtion, assign to the variables the clicked button value.
+- The JavaScript code also generate at the same time a random value, between 1 and 5, and every number has a value associated.
+This is called in the same function when the player pick up the choice.
+- Another function is also called at the same time, to determine the winner. An else if cycle is used to determine the game result.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## **Score**
+Last funtion is called to increase the score of the winner, P1 or P2.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+![](docs/images/player_choice.png)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## **Game Rules**
+Games rules are listed here, for better clarity.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+![](docs/images/rules.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## **Footer**
+The footer will shows the social media contact to check additional works from the creator.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![](docs/images/footer.png)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## **Feature left to implement**
+- I would like to implement sounds for every different fights (e.g.: Rock vs Scissors, or Lizard vs Spock).
+- Add additional field  in the result, when the score difference is five or more points between P1 and P2, I would like to add additional sound effect and text (e.g.: Annihilated!).
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+# **Testing**
+- The game has been tested in different browsers: Chrome, Firefox, Safari, Edge.
+- The game results are correct and verified.
+- I confirm that every part of the game is clearly visible, readable and very easy to understand.
+- Font choice and colors are easy to read and accessible.
+- Lighthouse result for mobile:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![](docs/images/mobile_lighthouse.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- Lighthouse result for desktop:
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+![](docs/images/desktop_lighthouse.png)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- I confirm that this project is responsive and it looks good on all standards screen sizes using the devtool device toolbar.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## **Bugs**
+No bugs found working on this project.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## **Validator Testing**
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### ***JShint Java Script Validator***
+JavaScript file tested with JSHint JavaScript Validator (https://jshint.com/).
 
-------
+The following option has been selected before validation: Configure >> New JavaScript features (ES6)
 
-## FAQ about the uptime script
+No errors were returned,
 
-**Why have you added this script?**
+### ***HTML Validator***
+No errors were returned when passing through the official W3C validator (https://validator.w3.org/).
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### ***CSS Validator***
+No errors were returned when passing through the official Jigsaw validator (https://jigsaw.w3.org/css-validator/).
 
-**How will this affect me?**
+# **Deployment**
+I deployed this website following the below steps:
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+*GitHub pages deployment* 
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+1. Log in to GitHub
+2. In your Repository section, select the project repository that you want to deploy
+3. In the menu located at the top of this section, click 'Settings'
+4. Select 'Pages' on the left-hand menu - this is around halfway down
+5. In the source section, select branch 'Master' and save
+6. The page is then given a site URL which you will see above the source section, it will look like the following: 
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![](docs/images/git-pages-published.png)
 
-**So….?**
+Please note it can take a while for this link to become fully active. 
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+*Forking the GitHub Repository*
 
-**Can I opt out?**
+If you want to make changes to your repository without affecting it, you can make a copy of it by 'Forking' it. This ensures your original repository remains unchanged.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+1. Find the relevant GitHub repository
+2. In the top right corner of the page, click the Fork button (under your account)
+3. Your repository has now been 'Forked' and you have a copy to work on
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+*Cloning the GitHub Repository*
 
-**Anything more?**
+Cloning your repository will allow you to download a local version of the repository to be worked on. Cloning can also be a great way to backup your work.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+1. Find the relevant GitHub repository
+2. Press the arrow on the Code button
+3. Copy the link that is shown in the drop-down
+4. Now open Gitpod & select the directory location where you would like the clone created
+5. In the terminal type 'git clone' & then paste the link you copied in GitHub
+6. Press enter and your local clone will be created.
+
+# **Credits**
+Header image has been taken from the internet, specifically from: https://learn.microsoft.com/en-us/samples/microsoft/rockpaperscissorslizardspock/azure-rock-paper-scissors/
+
+The code from the footer was taken from my first project: https://etherealsheep.github.io/salento_sole_mare_vento/
 
 ---
 
-Happy coding!
+## **Acknowledgements**
+
+I would like to thank my course mentor Guido Cecilio for his support and guidance throughout the course of the project, he motivated and inspired me to do better and better.
