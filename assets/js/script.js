@@ -9,27 +9,27 @@ let p1Score = 0;
 let p2Score = 0;
 
 gameChoices.forEach(choice => choice.addEventListener('click', (btn_click) => {
-    p1Choice = btn_click.target.id
+    p1Choice = btn_click.target.id;
     p1ChoiceShow.innerHTML = p1Choice;
     generatep2Choice();
     generateResult();
-    increaseWinnerScore()
-}))
+    increaseWinnerScore();
+}));
 
 /*** funtion to generate random selection for the opponent */
 function generatep2Choice() {
     // https://www.w3schools.com/js/js_random.asp
     let randomNumber = Math.floor(Math.random() * 5) + 1;
     if (randomNumber === 1) {
-        p2Choice = 'rock'
+        p2Choice = 'rock';
     } else if (randomNumber === 2) {
-        p2Choice = 'paper'
+        p2Choice = 'paper';
     } else if (randomNumber === 3) {
-        p2Choice = 'scissors'
+        p2Choice = 'scissors';
     } else if (randomNumber === 4) {
-        p2Choice = 'lizard'
+        p2Choice = 'lizard';
     } else {
-        p2Choice = 'spock'
+        p2Choice = 'spock';
     }
     p2ChoiceShow.innerHTML = p2Choice;
 }
@@ -37,47 +37,47 @@ function generatep2Choice() {
 /*** funtion to determine the result of every choice */
 function generateResult() {
     if (p1Choice === p2Choice) {
-        result = 'DRAW!'
+        result = 'DRAW!';
     } else if (p1Choice === 'rock' && p2Choice === 'paper') {
-        result = 'YOU LOSE!'
+        result = 'YOU LOSE!';
     } else if (p1Choice === 'rock' && p2Choice === 'scissors') {
-        result = 'YOU WIN!'
+        result = 'YOU WIN!';
     } else if (p1Choice === 'rock' && p2Choice === 'lizard') {
-        result = 'YOU WIN!'
+        result = 'YOU WIN!';
     } else if (p1Choice === 'rock' && p2Choice === 'spock') {
-        result = 'YOU LOSE!'
+        result = 'YOU LOSE!';
     } else if (p1Choice === 'paper' && p2Choice === 'rock') {
-        result = 'YOU WIN!'
+        result = 'YOU WIN!';
     } else if (p1Choice === 'paper' && p2Choice === 'scissors') {
-        result = 'YOU LOSE!'
+        result = 'YOU LOSE!';
     } else if (p1Choice === 'paper' && p2Choice === 'lizard') {
-        result = 'YOU LOSE!'
+        result = 'YOU LOSE!';
     } else if (p1Choice === 'paper' && p2Choice === 'spock') {
-        result = 'YOU WIN!'
+        result = 'YOU WIN!';
     } else if (p1Choice === 'scissors' && p2Choice === 'rock') {
-        result = 'YOU LOSE!'
+        result = 'YOU LOSE!';
     } else if (p1Choice === 'scissors' && p2Choice === 'paper') {
-        result = 'YOU WIN!'
+        result = 'YOU WIN!';
     } else if (p1Choice === 'scissors' && p2Choice === 'lizard') {
-        result = 'YOU WIN!'
+        result = 'YOU WIN!';
     } else if (p1Choice === 'scissors' && p2Choice === 'spock') {
-        result = 'YOU LOSE!'
+        result = 'YOU LOSE!';
     } else if (p1Choice === 'lizard' && p2Choice === 'rock') {
-        result = 'YOU LOSE!'
+        result = 'YOU LOSE!';
     } else if (p1Choice === 'lizard' && p2Choice === 'paper') {
-        result = 'YOU WIN!'
+        result = 'YOU WIN!';
     } else if (p1Choice === 'lizard' && p2Choice === 'scissors') {
-        result = 'YOU LOSE!'
+        result = 'YOU LOSE!';
     } else if (p1Choice === 'lizard' && p2Choice === 'spock') {
-        result = 'YOU WIN!'
+        result = 'YOU WIN!';
     } else if (p1Choice === 'spock' && p2Choice === 'rock') {
-        result = 'YOU WIN!'
+        result = 'YOU WIN!';
     } else if (p1Choice === 'spock' && p2Choice === 'paper') {
-        result = 'YOU LOSE!'
+        result = 'YOU LOSE!';
     } else if (p1Choice === 'spock' && p2Choice === 'scissors') {
-        result = 'YOU WIN!'
+        result = 'YOU WIN!';
     } else if (p1Choice === 'spock' && p2Choice === 'lizard') {
-        result = 'YOU LOSE!'
+        result = 'YOU LOSE!';
     }
     resultShow.innerHTML = result;
 }
@@ -93,4 +93,3 @@ function increaseWinnerScore() {
     document.getElementById('player_score').innerHTML = p1Score;
     document.getElementById('opponent_score').innerHTML = p2Score;
 }
-
